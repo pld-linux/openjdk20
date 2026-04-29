@@ -34,6 +34,7 @@ Source0:	https://github.com/openjdk/jdk20u/archive/jdk-%{version}-ga/%{name}-%{v
 Source10:	make-cacerts.sh
 Patch0:		no_optflags.patch
 Patch1:		x32.patch
+Patch2:		glibc-2.42.patch
 URL:		http://openjdk.java.net/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	ant
@@ -352,6 +353,7 @@ Przykłady dla OpenJDK.
 
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 # Make sure we have /proc mounted - otherwise idlc will fail later.
